@@ -10,6 +10,10 @@ class Solution(object):
         :type head: Optional[ListNode]
         :rtype: Optional[ListNode]
         """
+        # First we find how many nodes there are using my findCount function by traversing until we reach the end
+        # Then we get the median number if odd, if even, we get the second median node (middle 2nd)
+        # Formula for median is, if even, divide by 2, and add 1 to get second middle
+        # If odd, divide by 2, then round up
         tempHead = head
         count = self.findCount(tempHead)
         if(count % 2 == 0):

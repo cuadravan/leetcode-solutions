@@ -4,6 +4,8 @@ class Solution(object):
         :type num: int
         :rtype: int
         """
+        # Keep track of how many times array loops with step
+        # Then we continuously modify number until it becomes zero, if even divide by 2, if odd minus 1. Each time, incrementing step.
         step = 0
         newNum = num
         while(newNum != 0):
